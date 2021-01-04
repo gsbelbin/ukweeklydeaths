@@ -1,4 +1,4 @@
-setwd("~/Documents")
+setwd("~/UKWeeklyDeaths")
 library(ggplot2)
 library(tidyr)
 
@@ -16,7 +16,7 @@ ggplot(newdata) + geom_boxplot(data=newdata[newdata$Year != 2020,], mapping=aes(
        subtitle='Boxplots (including black dots) indicate the spread of weekly deaths for 2010-2019\nRed dots indicate the total weekly deaths so far in 2020',
        x='Week Number', y='Total Deaths from All Causes in England and Wales')
 
-
+ggsave("weeklydeaths.png")
 
 ggplot() + geom_boxplot(data=newdata[newdata$Year < 2018,], mapping=aes(x=WeekNo, y=Deaths, group=WeekNo)) +
   geom_point(data=newdata[newdata$Year == 2020 & newdata$Deaths != 0,], mapping=aes(x=WeekNo, y=Deaths), colour='red') +
