@@ -36,5 +36,4 @@ ggplot() +
   scale_x_continuous(breaks=1:52, minor_breaks=NULL) +
   scale_y_continuous(limits=c(0, 25000)) +
   labs(title='Total Deaths in England and Wales per Week from All Causes (ONS Data)',
-       subtitle='Boxplots (including black dots) indicate the spread of weekly deaths for 2010-2018\nRed dots indicate the total weekly deaths so far in 2020',
-       x='Week Number', y='Total Deaths from All Causes in England and Wales')
+              x='Week Number', y='Total Deaths from All Causes in England and Wales')
